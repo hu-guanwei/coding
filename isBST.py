@@ -1,13 +1,13 @@
 class TreeNode(object):
-	def __init__(self, val):
-		self.val = val
-		self.left = None
-		self.right = None 
+    def __init__(self, val):
+	self.val = val
+	self.left = None
+	self.right = None 
 		
 
 
 '''
-	  10                         10: in (-inf, +inf)
+      10                         10: in (-inf, +inf)
      /   \           5 in (-inf, 10)   12 in (10, +inf)
     5    12
    / \   / \
@@ -25,15 +25,15 @@ root.right.right = TreeNode(13)
 		
 
 def is_bst(root):
-	m = float('-inf')
-	M = float('+inf')
+    m = float('-inf')
+    M = float('+inf')
 	return __is_bst(root, m, M)
 
 def __is_bst(root, low, high):
-	if not root:
-		return True
-	if not low < root.val < high:
-		return False
-	return __is_bst(root.left, low, root.val) and __is_bst(root.right, root.val, high)
+    if not root:
+	return True
+    if not low < root.val < high:
+	return False
+    return __is_bst(root.left, low, root.val) and __is_bst(root.right, root.val, high)
 	
 print(is_bst(root))
