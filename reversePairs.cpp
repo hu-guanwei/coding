@@ -46,7 +46,7 @@ long long mergeSort(std::vector<int> &arr, int l, int r) {
 
 
 int main() {
-    int n;
+    int n;	
     std::cin >> n;
     std::vector<int> arr(n);
     for (int i = 0; i < n; i++) {
