@@ -10,12 +10,12 @@ long long merge(std::vector<int> &arr, int l, int s, int r) {
     long long cntInv = 0;
     while (i <= s && j <= r) {
 	if (arr[i] <= arr[j]) {
-		aux.push_back(arr[i]);
-		i++;
+            aux.push_back(arr[i]);
+	    i++;
 	} else {
-		cntInv += s - i + 1;
-		aux.push_back(arr[j]);
-		j++;
+	    cntInv += s - i + 1;
+	    aux.push_back(arr[j]);
+	    j++;
 	}
     }
     while (i <= s) {
