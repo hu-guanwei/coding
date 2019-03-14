@@ -2,12 +2,12 @@ from random import randint
 
 def partition(arr, l, r):
     '''
-	... * * * * * ...
+    ... * * * * * ...
         l       r
         i         j
-        arr[l, i] <= pivot
-        arr[i+1, j-1] to be considered
-        arr[j, r] > pivot
+    arr[l, i] <= pivot
+    arr[i+1, j-1] to be considered
+    arr[j, r] > pivot
     '''
     i = l
     j = r + 1
