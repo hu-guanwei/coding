@@ -6,12 +6,13 @@ def two_sum(arr, target):
     print all combinations of elements in the array
     that sum up to target
     '''
-    s = set()
-    for ele in arr:
-        if ele not in s:
-            s.add(target - ele)
-        else:
-            print(ele, target - ele)
+    seen = set()
+    for this_num in arr:
+        other_num = target - this_num
+        if other_num in seen:
+            print(this_num, other_num)
+         else:
+            seen.add(this_num)
 
 def two_sum_index(arr, target):
     d = dict()
